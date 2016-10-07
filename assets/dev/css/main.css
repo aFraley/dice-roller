@@ -1,0 +1,42 @@
+body {
+  background-color: #221E1D
+}
+#container {
+  background-color: #FAF5E6;
+  width:960px;
+  padding: 15px;
+  margin: auto;
+
+}
+#inside {
+  border: 2px solid #291F00;
+  border-radius: 11px;
+  background-color: #FFFFFF;
+  width: 760px;
+  padding: 11px;
+  margin: auto;
+  box-shadow: 8px 8px 6px #D1C9B2;
+}
+body {
+  font-family: Verdana, Arial, sans-serif;
+}
+h3 {
+  clear: left;
+}
+table {
+  width: 100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 6px;
+  text-align: center;
+}
+input {
+  text-align: center;
+}
+input[type=number]{
+  width: 80px;
+}

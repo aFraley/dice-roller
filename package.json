@@ -1,0 +1,26 @@
+{
+  "name": "dice-roller",
+  "version": "1.0.0",
+  "description": "An online dicerolling application for table-top gaming.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Hello\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aFraley/dice-roller.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Alan Fraley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aFraley/dice-roller/issues"
+  },
+  "homepage": "https://github.com/aFraley/dice-roller#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minifier": "^0.1.4"
+  }
+}
