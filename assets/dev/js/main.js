@@ -7,6 +7,8 @@
 
 function roll(){
 
+  // Declare and initiate variables.
+  // Plug into input fields in the view.
   var dice = document.getElementById("dice").value;
   var sides = document.getElementById("sides").value;
   var e = document.getElementById("posNeg").value;
@@ -15,18 +17,19 @@ function roll(){
   var out = "Roll " + dice + "d" + sides + " [";
   var sum = 0;
 
-  //roll the dice--in a loop if there are more than one die (2d6)
-  for (j = dice; j > 0; j--) {
+  // Roll the dice.
+  // Roll dice in a loop if there are more than one die (2d6).
+  for (var i = dice; i > 0; j--) {
     var roll = Math.floor(Math.random() * sides) +1;
       sum += roll;
       out += roll;
-      if (j==1) {
+      if (i == 1) {
         out += "]" + "\n" + sum;
       } else {
         out += "";
       }
 
-      //determine the modifier
+      // Determine the modifier.
       mod = document.getElementById("mod").value;
       if (e == "+") {
         sum += 1 * mod;
@@ -38,14 +41,14 @@ function roll(){
 
     }
 
-    //final output
+    // Output results.
     d20.value = sum;
     out += mod + " = " + sum + "\n";
     var results = document.getElementById("results");
     results.value = out + results.value;
 }
 
-//resets all fields
+// Reset all the input fields in the view.
 function reset() {
   var sides = document.getElementById("sides").value = 20;
   var mod = document.getElementById("mod")
@@ -54,7 +57,8 @@ function reset() {
   var results = document.getElementById("results").value = "";
 
 }
-//clears text area
+
+// Clears the text area that functions as a log in the view.
 function clearResults() {
   var results = document.getElementById("results").value = "";
   var d20 = document.getElementById("d20").value = "";
