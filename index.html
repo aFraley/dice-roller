@@ -3,36 +3,49 @@
 <head>
 	<meta charset="utf-8">
 	<title>Dice Roller</title>
+
 	<link rel="stylesheet" type="text/css" href="assets/dist/css/main.css">
 </head>
 <body>
 	<div id="container">
-	<div id="inside">
-	<form>
-	<table border="1">
-		<tr>
-			<th> DIE </th>
-			<th> + - </th>
-			<th>Modifier </th>
-			<th> Results </th>
-		</tr>
-		<tr>
-			<td> <input id="dice" size="3" value="1" type="number"> </input> d <input id="sides" size="3" value="20" type="text"> </input> <button type="button" onclick="roll()">ROLL</button> </td>
-			<td> <select id="posNeg"> <option value="+"> + </option> <option value="-"> - </option></select></td>
-			<td> <input id="mod" size="3" value="0" type="number"> </input> </td>
-			<td> = <input id="d20" size="3" type="text"> </input> </td>
+		<div id="inside">
+			<form>
+				<table border="1">
+					<tr>
+						<th> DIE </th>
+						<th>Modifier </th>
+						<th> Results </th>
+					</tr>
+					<tr>
+						<td> <input id="dice" size="3" value="1" type="number"> </input> d
+							<select id="sides">
+								<option value="20">20</option>
+								<option value="12">12</option>
+								<option value="10">10</option>
+								<option value="8">8</option>
+								<option value="6">6</option>
+								<option value="4">4</option>
+								<option value="100">100</option>
+							</select>
+							<button type="button" onclick="roll()">ROLL</button>
+						</td>
+						<td>
+							<input id="mod" size="3" value="0" type="number"> </input>
+						</td>
+						<td> =
+							<input id="d20" size="3" type="text"> </input>
+						</td>
+					</tr>
+					<button type="button" onclick="reset()"> RESET </button>
+				</form>
+			</table>
 
-		</tr>
-		<button type="button" onclick="reset()"> RESET </button>
-	</form>
-	</table>
-	<h3> Roll History </h3>
-	<textarea id="results" cols="30" rows="19" readonly="readonly">
-	</textarea>
-	<button type="button" onclick="clearResults()"> Clear Results </button>
-	</div>
+			<h3> Roll History </h3>
+			<textarea id="results" cols="30" rows="19" readonly="readonly"></textarea>
+			<button id="clear" type="button" onclick="clearResults()"> Clear Results </button>
+		</div>
 	</div>
 
-	<script src="assets/dist/js/main.js"></script>
+	<script src="assets/dev/js/main.js"></script>
 </body>
 </html>
